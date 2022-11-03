@@ -1,1 +1,40 @@
+void main (List<String> args)
+{
+  var kiyafet = new product(); 
+  kiyafet.Ad = "kazak"; //kiyafetin sahip olduğu özellikleri verdik burda
+  kiyafet.Marka = "dior";
+  kiyafet.Renk = "kırmızı";
+  kiyafet.Beden = "standart";
+  kiyafet.kodu = "A180E";
 
+  var etek = new product();
+  etek.Ad = "mini etek"; //eteğin sahip olduğu özellikler
+  etek.Marka = "koton"; 
+  etek.Renk = "mavi";
+  etek.Beden = "standart";
+  etek.kodu = "S852D";
+
+  var gomlek = new product();
+  gomlek.Ad = "oversize"; //gömmleğin sahip oldukları
+  gomlek.Marka = "vakko";
+  gomlek.Renk = "beyaz";
+  gomlek.Beden = "standart";
+  gomlek.kodu = "B049R";
+
+  var tayt = new product ();
+  tayt.Ad = "toparlayıcı";
+  tayt.Marka = "oysho"; //taytın özellikleri
+  tayt.Renk = "siyah";
+  tayt.Beden = "standart";
+  tayt.kodu = "W856T";
+
+}
+class product //product sınıfı oluşturduk
+{
+  var Ad; //sanırım açtığımız classın içine girecek nesnelerin özelliklerini belirttik
+  var Marka;
+  var Renk;
+  var Beden;
+  var kodu;
+
+}
