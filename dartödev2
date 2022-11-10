@@ -1,0 +1,39 @@
+class canlilar {
+  String? ad;
+  int? yas; //soru işareti olunca boş geçilebilir olduğu anlamına geliyodu
+  bool? cinsiyet;
+
+  canlilar({this.ad, this.yas, this.cinsiyet});
+
+  String yurumek() { //yürüme metodu canlilar altında
+    return "${this.ad} isimli canlı yürüyor.";
+  }
+}
+class insan extends canlilar { //insan canlinin kalıtımında
+  String? soyad;
+  bool? gozluklumu;
+  double? aylikmaas;
+
+  insan(String ad, String soyad, bool gozluk, double gelir) {
+    super.ad = ad;
+    this.soyad = soyad;
+    this.gozluklumu = gozluk; 
+    this.aylikmaas = gelir;
+  }
+  String kosmak() {//bu koşma metodu 
+    return "${this.ad} ${this.soyad} koşuyor.";
+  }
+}
+void main(List<String> args) {
+  var x = new canlilar();
+  x.ad = "kedi";
+  x.yas = 2;
+
+  print(x.yurumek()); //kedi yürüyo yazması lazım burda öyle amaçladım en azından
+
+  var y = new insan("rabia", "demirtaş", true, 2000);
+
+  print(y.yurumek());//rabia koşucak
+  print(y.kosmak());//yürüycek
+  //kedi koşamaz bu arada çünkü koşmak insana ait olmalı
+}
